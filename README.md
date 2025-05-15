@@ -66,6 +66,12 @@ During preprocessing, the following issues were addressed:
 - **Duplicate rows** affecting accurate counts  
 - **Incorrect data types** (e.g., price columns as text)  
 - **Inconsistent brand names or classifications**
+- 
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+Visualizations were created using matplotlib and seaborn.
 
 The dashboard includes four interactive pages:
 
