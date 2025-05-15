@@ -75,18 +75,18 @@ import seaborn as sns
 
 Visualizations were created using `matplotlib` and `seaborn`.
 
-📈 Power BI Dashboard
+## 📈 Power BI Dashboard
 The dashboard includes four interactive pages:
 
-Home – Project overview and key metrics
+ **Home** – Project overview and key metrics
 
-Average Sales of Phones – Offer analysis, pricing comparison, and ratings
+**Average Sales of Phones** – Offer analysis, pricing comparison, and ratings
 
-Phones Sales Details – Individual product details and comparisons
+**Phones Sales Details** – Individual product details and comparisons
 
-Total Sales of Phones – Summary of sales, environmental metrics, and brand behavior
+**Total Sales of Phones** – Summary of sales, environmental metrics, and brand behavior
 
-📌 DAX Measures Used
+### 📌 DAX Measures Used
 The following measures were created in Power BI:
 
 Average Product Price
@@ -111,12 +111,16 @@ Sum of Star Rating
 
 Total Sales Volume
 
-phone-dashboard/
-├── data/                  # Raw and cleaned datasets
-├── python-analysis/       # EDA scripts and visuals
+## 📂 Folder Structure
+
+```
+Phone-dashboard/
+├── data/                  # Raw and cleaned dataset
+├── python-analysis/       # EDA scripts and charts
 ├── dashboard/             # Power BI (.pbix) file
-├── visuals/               # Screenshots of dashboard pages
 └── README.md              # Project documentation
-📬 Author
-Mahmoud Mohamed Fawzy Elzayat
-🔗 LinkedIn
+```
+## 📬 Author
+
+**Mahmoud Mohamed Fawzy Elzayat**  
+[🔗 LinkedIn](https://www.linkedin.com/in/mahmoud-elzayat-data-analysis)
