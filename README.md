@@ -67,11 +67,6 @@ During preprocessing, the following issues were addressed:
 - **Incorrect data types** (e.g., price columns as text)  
 - **Inconsistent brand names or classifications**
 
-```python
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-##
 The dashboard includes four interactive pages:
 
 Home – Project overview and key metrics
