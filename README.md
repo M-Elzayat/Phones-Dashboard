@@ -74,6 +74,7 @@ import seaborn as sns
 
 Visualizations were created using matplotlib and seaborn.
 
+📈 Power BI Dashboard
 The dashboard includes four interactive pages:
 
 Home – Project overview and key metrics
