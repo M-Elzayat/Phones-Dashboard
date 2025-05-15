@@ -1,55 +1,118 @@
-# Phone Dashboard 📊📱
+# 📱 Phone Dashboard
 
-## Overview
+This project presents a detailed **data analysis** and **interactive dashboard** of mobile phone product data using **Excel**, **Python**, **Power BI**, and **DAX**. It focuses on analyzing product pricing, offers, brand behavior, customer ratings, sales volume, and environmental attributes.
 
-**Phone Dashboard** is an interactive Power BI dashboard developed to analyze the sales performance of a variety of mobile phones. It provides insights into original vs actual selling prices, sales volume, brand-wise performance, and product eco-friendliness.
+## 🎯 Project Objective
 
-This project was designed for analytical and educational purposes, showcasing how Power BI can be used to create visually rich, data-driven business insights.
+This project aims to analyze mobile phone product data from multiple perspectives, including pricing, brand dynamics, sales performance, and environmental impact. Key insights include:
 
-## Features
+### 📦 Product-Level Insights
 
-- 📈 **Average Product Price vs. Original Price**
-- 📊 **Sales Volume & Star Rating per Product**
-- 🏷️ **Brand-wise & Product-wise Analysis**
-- 🔁 **Number of Offers per Product**
-- 🌱 **Eco-Friendly Product Filter**
-- 📦 Breakdown of:
-  - Prime vs. Non-Prime Products
-  - Amazon's Choice vs. Others
-  - Best Sellers vs. Worst Sellers
+- Average Product Price  
+- Average Product Original Price  
+- Average Product Offer Price  
+- Average Star Rating  
+- Average Sales Volume  
+- Average Price and Rating per Product  
+- Sales Volume and Average Rating per Product  
+- Price per Product  
+- Sum of Product Price  
+- Sum of Product Original Price
 
-## Technologies Used
+### 🔄 Offer & Variation Analysis
 
-- **Power BI** – Data modeling & visualization
-- **Microsoft Excel** – Data source
-- **Python** – Data preprocessing (optional)
+- Number of Offers  
+- Total Offers per Product  
+- Comparison of Original and Discounted Prices by Product  
+- Average Original Price vs. Offer Price  
+- Number of Products With and Without Variations  
+- Number of Prime vs. Non-Prime Products  
+- Number of Amazon’s Choice vs. Other Products  
+- Number of Best Seller vs. Worst Seller Products  
 
-## Installation & Usage
+### 🏷️ Brand-Level Analysis
 
-1. Download and open the file `Phone Dashboard.pbix` using **Power BI Desktop**.
-2. Use slicers (Product Title, Brand Name) to filter and explore:
-   - Price metrics
-   - Sales volume
-   - Ratings
-   - Eco-friendliness
-3. Explore all visuals including donut charts, bar graphs, and line charts.
+- Brand-wise Comparison of Original and Offer Prices  
+- Number of Offers by Brand Name  
+- Sum of Product Price by Brand Name  
 
-> 📌 *Note: Make sure Power BI Desktop is installed on your machine.*
+### 🌱 Sustainability & Rating
 
-## Screenshot
+- Count of Products by Climate-Friendly Status  
+- Number of Climate-Friendly Products  
+- Average Star Rating  
+- Sum of Star Rating  
 
-![Phone Dashboard Screenshot](Screenshot%202025-05-09%20202412.png)
+### 📊 Sales Performance
 
-## Author
+- Total Sales Volume  
+- Sum of Sales Volume by Product Title
 
-Developed by **Mahmoud Elzayat**  
-For inquiries or showcasing purposes, feel free to reach out.
+## 🛠️ Tools & Technologies
 
-## License
+| Tool        | Purpose                                         |
+|-------------|-------------------------------------------------|
+| Excel       | Initial data formatting and exploration         |
+| Python      | Data cleaning and visualization using:  
+|             | - `pandas`: cleaning, transformation  
+|             | - `matplotlib`, `seaborn`: visual exploration   |
+| Power BI    | Dashboard creation and interactivity            |
+| DAX         | KPIs and custom calculations for insights       |
 
-This project is provided **for educational and analytical use only**.  
-It is **not intended for commercial use or redistribution without permission**.
+## 🧪 Data Cleaning & Challenges
 
-## Contribution
+During preprocessing, the following issues were addressed:
+- **Missing values** in product details and pricing  
+- **Duplicate rows** affecting accurate counts  
+- **Incorrect data types** (e.g., price columns as text)  
+- **Inconsistent brand names or classifications**
 
-Contributions are currently **not open**.
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+The dashboard includes four interactive pages:
+
+Home – Project overview and key metrics
+
+Average Sales of Phones – Offer analysis, pricing comparison, and ratings
+
+Phones Sales Details – Individual product details and comparisons
+
+Total Sales of Phones – Summary of sales, environmental metrics, and brand behavior
+
+📌 DAX Measures Used
+The following measures were created in Power BI:
+
+Average Product Price
+
+Average Product Original Price
+
+Avreage Product Offer Price
+
+Average Sales Volume
+
+Average Star Rating
+
+Count_Climate_Friendly
+
+Number of Offers
+
+Sum of product price
+
+Sum of product Orignal Price
+
+Sum of Star Rating
+
+Total Sales Volume
+
+phone-dashboard/
+├── data/                  # Raw and cleaned datasets
+├── python-analysis/       # EDA scripts and visuals
+├── dashboard/             # Power BI (.pbix) file
+├── visuals/               # Screenshots of dashboard pages
+└── README.md              # Project documentation
+📬 Author
+Mahmoud Mohamed Fawzy Elzayat
+🔗 LinkedIn
