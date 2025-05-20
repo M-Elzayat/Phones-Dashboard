@@ -1,115 +1,136 @@
+
 # 📱 Phone Dashboard
 
 This project presents a detailed **data analysis** and **interactive dashboard** of mobile phone product data using **Excel**, **Python**, **Power BI**, and **DAX**. It focuses on analyzing product pricing, offers, brand behavior, customer ratings, sales volume, and environmental attributes.
 
+---
+
 ## 🎯 Project Objective
 
-This project aims to analyze mobile phone product data from multiple perspectives, including pricing, brand dynamics, sales performance, and environmental impact. Key insights include:
+The main goal is to analyze mobile phone product data from multiple perspectives — **pricing strategies**, **brand competitiveness**, **sales trends**, and **sustainability attributes** — to extract actionable business insights.
 
-### 📦 Product-Level Insights
+---
 
-- Average Product Price  
-- Average Product Original Price  
-- Average Product Offer Price  
-- Average Star Rating  
-- Average Sales Volume  
-- Average Price and Rating per Product  
-- Sales Volume and Average Rating per Product  
-- Price per Product  
-- Sum of Product Price  
-- Sum of Product Original Price
+## 📦 Key Metrics & Insights
 
-### 🔄 Offer & Variation Analysis
+### 🛍️ Product-Level Insights
 
-- Number of Offers  
-- Total Offers per Product  
-- Comparison of Original and Discounted Prices by Product  
-- Average Original Price vs. Offer Price  
-- Number of Products With and Without Variations  
-- Number of Prime vs. Non-Prime Products  
-- Number of Amazon’s Choice vs. Other Products  
-- Number of Best Seller vs. Worst Seller Products  
+- **Average Product Price:** $176.34  
+- **Average Original Price:** $202.15  
+- **Average Offer Price:** $176.34  
+- **Average Star Rating:** 4.08  
+- **Total Units Sold:** 150,000  
+- **Total Revenue (Offer Price):** $56,250  
+- **Total Revenue (Original Price):** $64,480  
+
+> 🔎 *Insight:* High-selling products are often heavily discounted, leading to lower revenue despite volume.  
+
+---
+
+### 🔄 Offers & Variation Analysis
+
+- **Number of Offers:** 2,695  
+- **Products with Variations:** 71.2%  
+- **Prime Products:** 88  
+- **Amazon’s Choice Products:** 32  
+- **Best Seller Products:** 2  
+- **Climate-Friendly Products:** 75 (23.5%)
+
+> 📉 *Insight:* The number of promotions per product varies significantly. Only a few products are labeled as “Best Seller” or “Amazon’s Choice”, indicating a potential marketing gap.
+
+---
 
 ### 🏷️ Brand-Level Analysis
 
-- Brand-wise Comparison of Original and Offer Prices  
-- Number of Offers by Brand Name  
-- Sum of Product Price by Brand Name  
+- **Top Revenue Brand:** Samsung (~$23.8K)  
+- **Top Brands by Offers:**  
+  - Samsung: 1,159 offers  
+  - AT&T: 270  
+  - Apple: 234  
 
-### 🌱 Sustainability & Rating
+> 📊 *Insight:* Samsung leads in both offers and revenue, highlighting its market dominance and extensive product range.
 
-- Count of Products by Climate-Friendly Status  
-- Number of Climate-Friendly Products  
-- Average Star Rating  
-- Sum of Star Rating  
+---
 
-### 📊 Sales Performance
+### 🌱 Sustainability & Star Rating
 
-- Total Sales Volume  
-- Sum of Sales Volume by Product Title
+- **Climate-Friendly Products:** 75  
+- **Average Star Rating:** 4.08  
+- **Total Star Rating Sum:** ~408 (based on average * number of products)
+
+> 🌍 *Insight:* Sustainability tags are present in less than a quarter of products, offering an opportunity to expand green product lines.
+
+---
+
+### 📈 Sales Performance
+
+- **Total Sales Volume:** 150K units  
+- **Top-Selling Product:** Moto E Play (8K units)  
+- **Other High Performers:** Kids’ smartphones, Panasonic models
+
+> 📦 *Insight:* Some niche or low-cost phones significantly outsell premium models, showing value-driven consumer behavior.
+
+---
 
 ## 🛠️ Tools & Technologies
 
 | Tool        | Purpose                                         |
 |-------------|-------------------------------------------------|
-| Excel       | Initial data formatting and exploration         |
-| Python      | Data cleaning and visualization using:  
-|             | - `pandas`: cleaning, transformation  
-|             | - `matplotlib`, `seaborn`: visual exploration   |
-| Power BI    | Dashboard creation and interactivity            |
-| DAX         | KPIs and custom calculations for insights       |
+| **Excel**   | Initial data formatting and exploration         |
+| **Python**  | Data cleaning and visualization using:  
+|             | - `pandas` for transformation  
+|             | - `matplotlib`, `seaborn` for EDA               |
+| **Power BI**| Dashboard creation and interactivity            |
+| **DAX**     | KPIs and calculated measures for performance    |
+
+---
 
 ## 🧪 Data Cleaning & Challenges
 
-During preprocessing, the following issues were addressed:
-- **Missing values** in product details and pricing  
-- **Duplicate rows** affecting accurate counts  
-- **Incorrect data types** (e.g., price columns as text)  
-- **Inconsistent brand names or classifications**
+Key issues resolved during preprocessing:
+- Missing values in product attributes and prices  
+- Duplicates affecting accuracy of metrics  
+- Incorrect data types (e.g., price fields as strings)  
+- Inconsistent brand naming (e.g., "Samsung" vs "SAMSUNG")
 
 ```python
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+
+# Sample EDA snippet
+df['product_price'] = pd.to_numeric(df['product_price'], errors='coerce')
+sns.histplot(df['product_price'])
+plt.title('Price Distribution')
+plt.show()
 ```
 
-Visualizations were created using `matplotlib` and `seaborn`.
+---
 
-## 📈 Power BI Dashboard
-The dashboard includes four interactive pages:
+## 📈 Power BI Dashboard Pages
 
- **Home** – Project overview and key metrics
+1. **Home:** Key KPIs & overview  
+2. **Average Sales of Phones:** Price, offers, star ratings  
+3. **Phones Sales Details:** Sales per product, ratings, price  
+4. **Total Sales of Phones:** Brand sales, climate status, total volume  
 
-**Average Sales of Phones** – Offer analysis, pricing comparison, and ratings
+---
 
-**Phones Sales Details** – Individual product details and comparisons
+## 📊 DAX Measures Used
 
-**Total Sales of Phones** – Summary of sales, environmental metrics, and brand behavior
+- `Average Product Price`  
+- `Average Product Original Price`  
+- `Average Product Offer Price`  
+- `Average Sales Volume`  
+- `Average Star Rating`  
+- `Number of Offers`  
+- `Count_Climate_Friendly`  
+- `Sum of Product Price`  
+- `Sum of Original Price`  
+- `Sum of Star Rating`  
+- `Total Sales Volume`
 
-### 📌 DAX Measures Used
-The following measures were created in Power BI:
-
-Average Product Price
-
-Average Product Original Price
-
-Avreage Product Offer Price
-
-Average Sales Volume
-
-Average Star Rating
-
-Count_Climate_Friendly
-
-Number of Offers
-
-Sum of product price
-
-Sum of product Orignal Price
-
-Sum of Star Rating
-
-Total Sales Volume
+---
 
 ## 📂 Folder Structure
 
@@ -120,6 +141,9 @@ Phone-dashboard/
 ├── dashboard/             # Power BI (.pbix) file
 └── README.md              # Project documentation
 ```
+
+---
+
 ## 📬 Author
 
 **Mahmoud Mohamed Fawzy Elzayat**  
